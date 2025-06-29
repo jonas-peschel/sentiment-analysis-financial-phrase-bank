@@ -11,7 +11,8 @@ In this project we implemented and trained different model architectures to perf
 The Project uses the Financial Phrase Bank dataset from
 _Malo, P., Sinha, A., Korhonen, P., Wallenius, J., & Takala, P. (2014). Good debt or bad debt: Detecting semantic orientations in economic texts. Journal of the Association for Information Science and Technology, 65(4), 782-796._
 
-It contains about 5,000 labeled sentences from the finance and economics news domain. Each sentence in the dataset was labeled by 16 domain experts as having either positive, negative, or neutral sentiment, reagarding its implications for potential investors and stock market values.
+It contains about 5,000 labeled sentences from the finance and economics news domain. Each sentence in the dataset was labeled by 16 domain experts as having either positive, negative, or neutral sentiment, reagarding its implications for potential investors and stock market values. In this project we used the examples where at
+least 50% of the annotators agreed on the label ([`FinancialPhraseBank-v1.0/Sentences_50Agree.txt`](FinancialPhraseBank-v1.0/Sentences_50Agree.txt)).
 
 ## Implemented models 
 
