@@ -1,0 +1,39 @@
+name: training-rnn-sweep
+program: task_5_sweep_rnn.py
+project: training-rnn-sweeps
+entity: jonaspeschel-technical-university-of-berlin
+method: grid 
+# run_cap: 4
+metric:
+  goal: maximize
+  name: test_weighted_f1
+parameters:
+  # pre-processing
+  only_binary:
+    values: [false, true]
+  remove_punct:
+    value: false
+  remove_stopwords:
+    value: false
+  remove_nums:
+    value: false 
+  lemmatize:
+    value: true
+  # text vectorization
+  vectorization:
+    value: None
+  # network training
+  learning_rate:
+    value: !!float 1e-4
+  dropout:
+    value: 0.4
+  l1_reg: 
+    value: 0
+  l2_reg: 
+    value: !!float 1e-4
+  n_epochs:
+    value: 40
+  batch_size:
+    value: 16
+  hidden_layer_dim:
+    values: [32, 64]

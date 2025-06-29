@@ -1,0 +1,36 @@
+name: preprocessing-sweep
+program: task_3_2_sweep_nn.py
+project: training-nn-sweeps
+entity: jonaspeschel-technical-university-of-berlin
+method: grid
+metric:
+  goal: maximize
+  name: test_weighted_f1
+parameters:
+  # pre-processing
+  only_binary:
+    value: false
+  remove_punct:
+    values: [true, false]
+  remove_stopwords:
+    values: [true, false]
+  remove_nums:
+    values: [true, false]
+  lemmatize:
+    values: [true, false]
+  # text vectorization
+  vectorization: 
+    value: BagOfWords
+  # network training
+  learning_rate:
+    value: !!float 1e-4
+  l1_reg: 
+    value: !!float 1e-5
+  l2_reg: 
+    value: !!float 1e-4
+  n_epochs:
+    value: 40
+  batch_size:
+    value: 32
+  hidden_layer_dim:
+    value: 5

@@ -1,0 +1,23 @@
+name: train-bayes-full-sweep
+program: task_3_1_sweep_bayes.py
+project: training-bayes-sweeps
+entity: jonaspeschel-technical-university-of-berlin
+method: grid
+metric:
+  goal: maximize
+  name: test_weighted_f1
+parameters:
+  # pre-processing
+  only_binary:
+    value: false
+  remove_punct:
+    values: [true, false]
+  remove_stopwords:
+    values: [true, false]
+  remove_nums:
+    values: [true, false]
+  lemmatize:
+    values: [true, false]
+  # text vectorization
+  vectorization:
+    values: ["BagOfWords", "TF-IDF"]
